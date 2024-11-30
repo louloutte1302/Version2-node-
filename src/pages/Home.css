@@ -1,0 +1,151 @@
+.home-container { /* le tout?*/
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Alert box */
+.alert-box {
+    grid-column: 1 / span 2;
+    text-align: center;
+    background-color: #fdd;
+    color: #c00;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.bouton-en-colonne { /* les 3 boutons centraux*/
+    color: white;
+    max-width: 60%; /* Limite à la moitié de l'écran */
+    position: relative;
+    margin-left: 20%;
+    display: grid; /* Utilisation de la grille */
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px; /* Espacement entre les boutons */
+    padding: 20px;
+    justify-content: center; /* Centre les colonnes */
+}
+
+.bouton-en-colonne button:nth-child(3) {
+    grid-column: span 2; /* Le troisième bouton occupe deux colonnes */
+    justify-self: center; /* Centre le bouton */
+}
+
+.button-home {
+    display: flex;
+    justify-content: center;
+}
+
+.home-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.button-container {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-button {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    padding: 70px 70px;
+    border: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stockage, #tresorerie, #statistiques {
+    position: relative; /* Nécessaire pour positionner le texte par rapport à l'image */
+    background-size: cover; /* Assure que l'image couvre tout le bouton */
+    filter: grayscale(100%); /* Rend l'image en noir et blanc */
+    color: white; /* Contraste élevé pour le texte */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Ajoute une ombre portée pour améliorer la lisibilité */
+}
+
+#stockage::after, #tresorerie::after, #statistiques::after {
+    content: ""; /* Ajout d'une couche pour le contraste */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Couche semi-transparente pour améliorer le contraste */
+    z-index: 1; /* Place cette couche en dessous du texte */
+    border-radius: 5px; /* Respecte les bords arrondis */
+}
+
+#stockage:hover, #tresorerie:hover, #statistiques:hover {
+    filter: grayscale(0%); /* Retire l'effet noir et blanc au survol */
+    color: #ffffff; /* Renforce le contraste pour le texte */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 1); /* Augmente l'ombre pour une meilleure lisibilité */
+}
+
+.nav-button {
+    position: relative; /* Pour garantir que le texte est bien positionné */
+    z-index: 2; /* Positionne le texte au-dessus de la couche semi-transparente */
+}
+
+
+#stockage{
+    background-image: url("https://supply-chain-experts.fr/wp-content/uploads/2019/03/Expertise-entreposage-magasinage-stockage-2-e1581171450184.jpg");
+    filter: grayscale(100%); /* Rend l'image en noir et blanc */
+}
+
+#tresorerie{
+    background-image: url("https://media.lesechos.com/api/v1/images/view/5d1471cb8fe56f5ee252fa76/1024x576-webp/2095974-argent-6-raisons-de-preferer-le-cash-web-tete-030396551186.webp");
+    filter: grayscale(100%); /* Rend l'image en noir et blanc */
+
+}
+
+#statistiques{
+    background-image: url("https://www.edulcorants.eu/wp-content/uploads/2017/08/statistique-edulcorants-analyse.png");
+    filter: grayscale(100%); /* Rend l'image en noir et blanc */
+
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+
+.evenement-container {
+    flex: 1;
+    max-width: 45%;
+}
+
+.evenement-item {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .home-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container,
+    .evenement-container {
+        max-width: 100%;
+    }
+}

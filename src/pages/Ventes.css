@@ -1,0 +1,51 @@
+.table-stock {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(212, 235, 203);
+    table-layout: auto; /* auto extension de la table si beosin */
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius:12px; /* arrondis des angles de la table*/
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ombre de la table*/
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+
+ /*MISE EN FORME TITRE*/
+  th {
+    background-color: rgb(107, 144, 132);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /*mise en majuscule du txt*/
+    font-size: 25px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #b8b8b8; /* couleurs de la ligne alternée*/
+  }
+  
+  tr:hover {
+    background-color: #a5bea9; /* couleur de passage de souris*/
+  }
+
+  
+
+
+  
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align:center;
+}
+
+.afficher-produit
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 2%;
+    background-color: rgb(107, 144, 132);
+}

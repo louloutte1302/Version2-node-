@@ -1,0 +1,30 @@
+# Ignorer le dossier node_modules
+node_modules/
+
+# Ignorer les fichiers de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ignorer le dossier de dépendances lock pour npm, Yarn, et pnpm
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignorer les fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# Ignorer les dossiers temporaires
+.cache/
+.temp/
+
+# Ignorer les fichiers de configuration des éditeurs
+.vscode/
+.idea/
+
+# Ignorer les fichiers générés par des outils de build (selon ton projet)
+dist/
+build/
